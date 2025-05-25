@@ -76,24 +76,24 @@
     </ul>
     <p>If you’re interested in acquiring either (or all) of them, please get in touch:</p>
     <div id="email-contact">
+      <!-- placeholder button, replaced by JS -->
       <a class="btn-contact" href="#">Contact Us</a>
     </div>
     <p class="note">Serious inquiries only.</p>
   </div>
 
   <script>
-    // Ofuscar email para bots
+    // Obfuscate email from bots
     (function(){
-      var u = "exponentis.software";
-      var d = "gmail.com";
-      var mailto = 'mailto:' + u + '@' + d;
-      var display = u + ' [at] ' + d.replace('.', ' [dot] ');
+      var user = "exponentis.software";
+      var domain = "gmail.com";
+      var mailto = 'mailto:' + user + '@' + domain;
+      var display = user + ' [at] ' + domain.replace('.', ' [dot] ');
       var link = document.createElement('a');
       link.href = mailto;
       link.className = 'btn-contact';
       link.textContent = display;
       var container = document.getElementById('email-contact');
-      // reemplazamos el botón placeholder
       container.innerHTML = '';
       container.appendChild(link);
     })();
